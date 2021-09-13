@@ -7,8 +7,8 @@ where you can learn more about the topic and find more example code.
 
 Learning Github Actions
 -----------------------
-Suppose we have a python script `script.py` on which the team is working in the repo
-and for which some unit tests have been written in `tests.py`. In order to make sure
+Suppose we have a python script `Experiment.py` on which the team is working in the repo
+and for which some unit tests have been written in `Experiment_test.py`. In order to make sure
 that the script is still working whenever some changes are pushed we want Github to
 run the tests automatically and tell us whenever some of the tests failed.
 
