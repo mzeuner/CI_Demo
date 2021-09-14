@@ -17,7 +17,7 @@ from different branches etc. we might want to require that Github runs the tests
 on the new branch before we can even merge the pr.
 
 The main addition to our repo is a `.yaml` or `.yml` file that should be put
-in a separate direcotry `.github/workflow`.
+in a separate directory `.github/workflows`.
 Github has a good tutorial, look no further than here
 
 https://docs.github.com/en/actions/quickstart
