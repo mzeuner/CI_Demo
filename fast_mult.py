@@ -1,4 +1,20 @@
+"""
 
+This file contains some basic functions for computing with polynomials.
+Polynomials are encoded as lists of coefficients increasing in degree.
+So the polynomial 3x^2 + 2x + 1 corresponds to the list [1,2,3] etc...
+
+In particular, we give two ways of multiplying polynomials.
+The naive/standard way is in O(n) and the faster way using Karatsuba's method
+is in O(n ^ log(3)).
+
+It is however not easy to see that these two algorithms always
+produce the same result, so we want to do some testing!
+
+"""
+
+
+## preliminaries
 def add_poly(p,q):
     res = [];
     if p==[]:
@@ -29,7 +45,7 @@ def sub_poly(p,q):
     return add_poly(p,neg_poly(q))
 
 
-### help functions from functional programming
+## help functions from functional programming
 def my_repeat(i,x):
     res = []
     for j in range(0,i):
@@ -53,7 +69,7 @@ def shift_right(n,p):
     res.extend(p)
     return res
 
-### the functions we're interested in
+### the naive way to multiply polynomials
 def mul_poly(p,q):
     res=[]
     if p==[] or q==[]:
@@ -64,7 +80,7 @@ def mul_poly(p,q):
             res = add_poly(res,snd)
     return res
 
-
+## Karatsuba's algorithm for fast multiplication
 def karatsuba(p,q):
     if len(p)<=2 or len(q)<=2:
         return mul_poly(p,q)
@@ -86,7 +102,9 @@ def karatsuba(p,q):
 
 def main():
     print(mul_poly([1,2],[3,4]))
-    print(karatsuba([1,2,3],[3,4,5]))
+    print(karatsuba([1,2,3,4,5],[6,7,8,9,10]))
+    print(mul_poly([1,2,3,4,5],[6,7,8,9,10]))
+
 
 if __name__ == "__main__":
     main()

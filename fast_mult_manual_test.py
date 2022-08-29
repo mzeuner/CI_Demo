@@ -1,6 +1,5 @@
 import unittest
-# from pytest import list_of
-from karatsuba import mul_poly, karatsuba
+from fast_mult import mul_poly, karatsuba
 
 class MyTestCase(unittest.TestCase):
     def test_mul_poly(self):
@@ -14,11 +13,6 @@ class MyTestCase(unittest.TestCase):
         p=[1,2,3,4,5]
         q=[6,7,8,9,10]
         self.assertEqual(mul_poly(p,q), karatsuba(p,q))
-
-
-    # @pytest.mark.randomize(p=list_of(int), q=list_of(int))
-    # def test_randomized(self):
-    #     self.assertEqual(mul_poly(p,q), karatsuba(p,q))
 
 
 
