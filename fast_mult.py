@@ -4,7 +4,7 @@ This file contains some basic functions for computing with polynomials.
 Polynomials are encoded as lists of coefficients increasing in degree.
 So the polynomial 3x^2 + 2x + 1 corresponds to the list [1,2,3] etc...
 
-In particular, we give two ways of multiplying polynomials.
+In particular we give two ways of multiplying polynomials.
 The naive/standard way is in O(n) and the faster way using Karatsuba's method
 is in O(n ^ log(3)).
 
@@ -64,6 +64,9 @@ def my_drop(n,p):
         res.append(p[i])
     return res
 
+
+## a function adding n zeroes at the beginning of,
+## corresponds to multiplying p with x^n
 def shift_right(n,p):
     res = my_repeat(n,0)
     res.extend(p)
