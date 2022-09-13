@@ -6,7 +6,7 @@ So the polynomial 3x^2 + 2x + 1 corresponds to the list [1,2,3] etc...
 
 In particular we give two ways of multiplying polynomials.
 The naive/standard way is in O(n^2) and the faster way using Karatsuba's method
-is in O(n ^ log(3)).
+is in O(n ^ lg(3)).
 
 It is however not easy to see that these two algorithms always
 produce the same result, so we want to do some testing!
