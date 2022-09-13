@@ -5,7 +5,7 @@ Polynomials are encoded as lists of coefficients increasing in degree.
 So the polynomial 3x^2 + 2x + 1 corresponds to the list [1,2,3] etc...
 
 In particular we give two ways of multiplying polynomials.
-The naive/standard way is in O(n) and the faster way using Karatsuba's method
+The naive/standard way is in O(n^2) and the faster way using Karatsuba's method
 is in O(n ^ log(3)).
 
 It is however not easy to see that these two algorithms always
@@ -91,8 +91,8 @@ def karatsuba(p,q):
         m = min(len(p) // 2, len(q) // 2)
         a = my_drop(m,p)
         b = my_take(m,p)
-        c = my_drop(m,q)
-        d = my_take(m,q)
+        d = my_drop(m,q)
+        c = my_take(m,q)
         ac = karatsuba(a,c)
         bd = karatsuba(b,d)
         a_plus_b = add_poly(a,b)
