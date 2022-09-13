@@ -3,7 +3,7 @@ name: Python Unit Tests
 on: [push]
 
 jobs:
-  Multiplication testing:
+  MultiplicationTesting:
 
     runs-on: ubuntu-latest
 
