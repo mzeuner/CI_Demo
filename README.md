@@ -1,22 +1,22 @@
 Using Github Actions for Continuous Integration
 ===============================================
 
-This dummy repo is supposed to show how to get started with Github actions if you want to
+This dummy repo is supposed to show you how to get started with Github actions if you want to
 use it for continuous integration (CI) in your projects. Below are some links to the relevant pages
 where you can learn more about the topic and find more example code.
 
 Learning Github Actions
 -----------------------
-Suppose we have a python script `Experiment.py` on which the team is working in the repo
+Suppose you have a python script `Experiment.py` on which your team is working in the repo
 and for which some unit tests have been written in `Experiment_test.py`. In order to make sure
-that the script is still working whenever some changes are pushed we want Github to
+that the script is still working whenever some changes are pushed, we want Github to
 run the tests automatically and tell us if some of the tests failed.
 
-If we are working in a bigger team where the developers have to make pull requests
-from different branches, we might want to require that Github runs the tests
-on the new branch before we can even merge the pr.
+If you are working in a bigger team where developers have to make pull requests
+from different branches, you might want to require that Github runs the tests
+on the branch before a pr can be merged.
 
-The main addition to our repo is a `.yaml` or `.yml` file that should be put
+The main addition to the repo is a `.yaml` or `.yml` file that should be put
 in a separate directory `.github/workflows`.
 Github has a good tutorial, look no further than here
 
@@ -24,8 +24,7 @@ https://docs.github.com/en/actions/quickstart
 
 and here
 
-https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions
-
+https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 
 Actions for Python
 ------------------
@@ -33,10 +32,6 @@ The support for python in Github actions is pretty good and setting it up is rel
 The basics can be found here
 
 https://docs.github.com/en/actions/guides/building-and-testing-python
-
-or here
-
-https://docs.github.com/en/actions/guides/building-and-testing-nodejs-or-python?langId=py
 
 If you are using some special version of python that is not the default of your runner,
 you can install it like this:
