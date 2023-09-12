@@ -1,6 +1,12 @@
 name: Python tests
 
-on: [push,pull-request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   MultiplicationTesting:
