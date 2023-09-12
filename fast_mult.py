@@ -4,7 +4,7 @@ This file contains some basic functions for computing with polynomials.
 Polynomials are encoded as lists of coefficients increasing in degree.
 So the polynomial 3x^2 + 2x + 1 corresponds to the list [1,2,3] etc...
 
-In particular we give two ways of multiplying polynomials.
+In particular, we give two ways of multiplying polynomials.
 The naive/standard way is in O(n^2) and the faster way using Karatsuba's method
 is in O(n ^ lg(3)).
 
