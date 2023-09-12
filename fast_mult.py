@@ -95,8 +95,8 @@ def karatsuba(p,q):
         d = my_take(m,q)
         ac = karatsuba(a,c)
         bd = karatsuba(b,d)
-        a_plus_b = add_poly(a,b)
-        c_plus_d = add_poly(c,d)
+        a_plus_b = add_poly(a,c)
+        c_plus_d = add_poly(b,d)
         ad_plus_bc = sub_poly(sub_poly(karatsuba(a_plus_b, c_plus_d), ac), bd)
 
         return add_poly(shift_right(2*m,ac), add_poly(shift_right(m,ad_plus_bc), bd))
