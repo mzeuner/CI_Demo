@@ -85,7 +85,7 @@ def mul_poly(p,q):
 
 ## Karatsuba's algorithm for fast multiplication
 def karatsuba(p,q):
-    if len(p)<=2 or len(q)<=2:
+    if len(p)<=3 or len(q)<=3:
         return mul_poly(p,q)
     else:
         m = min(len(p) // 2, len(q) // 2)
